@@ -7,10 +7,10 @@ scalaVersion:= "2.11.7"
 
 libraryDependencies ++= Seq(
   "org.slf4j"          % "slf4j-api"                  % "1.6.4",
-  "io.swagger"         % "swagger-core"               % "1.5.7",
-  "io.swagger"        %% "swagger-scala-module"       % "1.0.1",
+  "io.swagger"         % "swagger-core"               % "1.5.8",
+  "io.swagger"        %% "swagger-scala-module"       % "1.0.2",
   "com.fasterxml.jackson.module" %% "jackson-module-scala" % "2.7.3",
-  "com.typesafe.play" %% "routes-compiler"            % "2.5.0",
+  "com.typesafe.play" %% "routes-compiler"            % "2.5.3",
   "com.typesafe.play" %% "play-ebean"                 % "2.0.0"            % "test",
   "org.specs2"        %% "specs2-core"                % "3.6.6"            % "test",
   "org.specs2"        %% "specs2-mock"                % "3.6.6"            % "test",
