@@ -1,5 +1,5 @@
 name := "swagger-play2"
-version := "1.6.0"
+version := "1.6.0-BTG"
 
 checksums in update := Nil
 
@@ -9,6 +9,7 @@ libraryDependencies ++= Seq(
   "org.slf4j"          % "slf4j-api"                  % "1.6.4",
   "io.swagger"         % "swagger-core"               % "1.5.7",
   "io.swagger"        %% "swagger-scala-module"       % "1.0.1",
+  "com.fasterxml.jackson.module" %% "jackson-module-scala" % "2.7.3",
   "com.typesafe.play" %% "routes-compiler"            % "2.5.0",
   "com.typesafe.play" %% "play-ebean"                 % "2.0.0"            % "test",
   "org.specs2"        %% "specs2-core"                % "3.6.6"            % "test",
@@ -16,17 +17,17 @@ libraryDependencies ++= Seq(
   "org.specs2"        %% "specs2-junit"               % "3.6.6"            % "test",
   "org.mockito"        % "mockito-core"               % "1.9.5"            % "test")
 
-publishTo <<= version { (v: String) =>
-  val nexus = "https://oss.sonatype.org/"
-  if (v.trim.endsWith("SNAPSHOT"))
-    Some("snapshots" at nexus + "content/repositories/snapshots")
-  else
-    Some("releases"  at nexus + "service/local/staging/deploy/maven2")
-}
-publishArtifact in Test := false
-publishMavenStyle := true
-pomIncludeRepository := { x => false }
-credentials += Credentials(Path.userHome / ".ivy2" / ".credentials")
+//publishTo <<= version { (v: String) =>
+//  val nexus = "https://oss.sonatype.org/"
+//  if (v.trim.endsWith("SNAPSHOT"))
+//    Some("snapshots" at nexus + "content/repositories/snapshots")
+//  else
+//    Some("releases"  at nexus + "service/local/staging/deploy/maven2")
+//}
+//publishArtifact in Test := false
+//publishMavenStyle := true
+//pomIncludeRepository := { x => false }
+//credentials += Credentials(Path.userHome / ".ivy2" / ".credentials")
 organization := "io.swagger"
 pomExtra := {
   <url>http://swagger.io</url>
